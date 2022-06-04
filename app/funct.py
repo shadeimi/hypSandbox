@@ -8,12 +8,3 @@ def factorial(num: int) -> int:
         total *= _
     return total
 
-
-def palindrome(n: int):
-    temp = n
-    rev = 0
-    while n > 0:
-        dig = n % 10
-        rev = rev*10+dig
-        n = n//10
-    return rev
