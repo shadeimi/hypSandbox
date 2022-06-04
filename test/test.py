@@ -1,6 +1,13 @@
 import pytest
 from app.funct import factorial
 
+"""
+    test cases are boring to write
+    random, unbiased test examples are hard to come up with
+    the test suite will quickly balloon in size so it will be hard to read and maintain going forward
+    again, it's boring!
+    it's hard to flesh out edge cases
+"""
 
 def test_factorial_less_than_0():
     with pytest.raises(ValueError):
