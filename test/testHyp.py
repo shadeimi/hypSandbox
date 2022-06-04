@@ -12,6 +12,7 @@ from hypothesis import strategies as st
 
 
 @given(integers(min_value=1, max_value=3000))
+@settings(verbosity=Verbosity.verbose)
 def test_factorial(num: int):
     result = factorial(num) / factorial(num - 1)
     assert num == result
