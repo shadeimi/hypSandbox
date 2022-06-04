@@ -25,11 +25,3 @@ def test_fact(s):
     assert res.status_code == 200
     assert res.json() == {"message": flocal(s)}
     assert json.loads(res.json())['message'] == fpy(s)
-
-
-@given(st.integers())
-def test_palindrome(s):
-    res = client.get(f"/api/palindrome/{s}")
-
-    assert res.status_code == 200
-    assert json.loads(res.json())['message'] == s
